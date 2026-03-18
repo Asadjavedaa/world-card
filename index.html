@@ -961,6 +961,89 @@
                 text-align: center;
             }
         }
+
+
+
+         .slider-container {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 1400px;
+            margin: 40px auto;
+            padding: 40px 50px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .grid-wrapper {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .category-grid {
+            display: flex;
+            transition: var(--transition-smooth);
+        }
+
+        .slide-group {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 20px;
+            min-width: 100%;
+        }
+
+        .category-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .category-card:hover { transform: translateY(-5px); }
+
+        .image-wrapper {
+            width: 120px;
+            height: 120px;
+            border-radius: 20px;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            border: 1px solid #eeeeee;
+            margin-bottom: 12px;
+        }
+
+        .image-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+        .category-name { font-size: 13px; font-weight: 600; color: #1a1a1a; }
+
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 45px;
+            height: 45px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 10;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .nav-btn.prev { left: 5px; }
+        .nav-btn.next { right: 5px; }
+        .nav-btn.disabled { opacity: 0.3; cursor: not-allowed; pointer-events: none; }
+
+        .slider-footer {
+            margin-top: 20px;
+            text-align: right;
+            font-size: 12px;
+            color: #888;
+        }
     </style>
 </head>
 
@@ -1095,17 +1178,42 @@
             <h3>24/7 Support</h3>
             <p>Dedicated customer support team at your service anytime.</p>
         </div>
-        <div class="feature-card">
-            <i class="fas fa-arrow-rotate-left"></i>
-            <h3>Easy Returns</h3>
-            <p>30-day no-questions-asked return policy for every product.</p>
-        </div>
-        <div class="feature-card">
-            <i class="fas fa-arrow-rotate-left"></i>
-            <h3>Easy Returns</h3>
-            <p>30-day no-questions-asked return policy for every product.</p>
-        </div>
     </section>
+    <div class="slider-container">
+        <div class="nav-btn prev" id="catPrevBtn"><i class="fa-solid fa-chevron-left"></i></div>
+        <div class="nav-btn next" id="catNextBtn"><i class="fa-solid fa-chevron-right"></i></div>
+
+        <div class="grid-wrapper">
+            <div class="category-grid" id="catGrid">
+                
+                <div class="slide-group">
+                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=1"></div><span class="category-name">Home Decor</span></div>
+                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=2"></div><span class="category-name">Laptop</span></div>
+                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=3"></div><span class="category-name">Bedding</span></div>
+                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=4"></div><span class="category-name">Tools</span></div>
+                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=5"></div><span class="category-name">Kitchen</span></div>
+                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=6"></div><span class="category-name">Office</span></div>
+                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=7"></div><span class="category-name">Pets</span></div>
+                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=8"></div><span class="category-name">Network</span></div>
+                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=9"></div><span class="category-name">Baby</span></div>
+                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=10"></div><span class="category-name">Watches</span></div>
+                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=11"></div><span class="category-name">Generators</span></div>
+                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=12"></div><span class="category-name">Handmade</span></div>
+                </div>
+
+                <div class="slide-group">
+                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=13"></div><span class="category-name">Fashion</span></div>
+                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=14"></div><span class="category-name">Gaming</span></div>
+                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=15"></div><span class="category-name">Electronics</span></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slider-footer">
+            <span id="catPaginationText">Slide 1 / 2 | Total Categories: 15</span>
+        </div>
+    </div>
 
     <!-- Categories Section -->
     <section class="categories">
@@ -1295,6 +1403,46 @@
                     </div>
                 </div>
             </div>
+             <div class="product-card">
+                <div class="badge-tag sale">SALE -50%</div>
+                <div class="wishlist-btn"><i class="far fa-heart"></i></div>
+                <div class="product-img-box">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1000&auto=format&fit=crop"
+                        alt="Controller">
+                </div>
+                <div class="product-info">
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="far fa-star"></i>
+                        <span>(2k Reviews)</span>
+                    </div>
+                    <h3>X-Force Wireless Controller</h3>
+                    <div class="product-footer">
+                        <div class="price">$45.00 <span class="old-price">$90.00</span></div>
+                        <button class="add-to-cart" onclick="addToCart('X-Force Controller')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+             <div class="product-card">
+                <div class="badge-tag sale">SALE -50%</div>
+                <div class="wishlist-btn"><i class="far fa-heart"></i></div>
+                <div class="product-img-box">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1000&auto=format&fit=crop"
+                        alt="Controller">
+                </div>
+                <div class="product-info">
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="far fa-star"></i>
+                        <span>(2k Reviews)</span>
+                    </div>
+                    <h3>X-Force Wireless Controller</h3>
+                    <div class="product-footer">
+                        <div class="price">$45.00 <span class="old-price">$90.00</span></div>
+                        <button class="add-to-cart" onclick="addToCart('X-Force Controller')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1325,6 +1473,17 @@
                     <div>
                         <h4>Sarah Parker</h4>
                         <span>Gadget Enthusiast</span>
+                    </div>
+                </div>
+            </div>
+             <div class="testi-card">
+                <p>"The 3D interface is mind-blowing. Shopping at World Cart feels like the future is here. Exceptional
+                    product quality and support."</p>
+                <div class="user-info">
+                    <img src="https://i.pravatar.cc/150?u=1" alt="User">
+                    <div>
+                        <h4>James Wilson</h4>
+                        <span>Verified Buyer</span>
                     </div>
                 </div>
             </div>
@@ -1374,7 +1533,7 @@
         </div>
 
         <div class="footer-bottom">
-            <div>&copy; 2026 World Cart Inc. All Rights Reserved. Powered by AI Excellence.</div>
+            <div>&copy; 2026 Noshahi Developers Inc. All Rights Reserved. Powered by Noshahi Developers Inc.</div>
             <div class="payment-methods">
                 <i class="fab fa-cc-visa"></i>
                 <i class="fab fa-cc-mastercard"></i>
@@ -1482,10 +1641,10 @@
             }, 1000);
         }
 
-        // --- 3D Hover Effect ---
-        const productCards = document.querySelectorAll('.product-card');
+        // --- 3D Hover Effect for Products and Categories ---
+        const tiltCards = document.querySelectorAll('.product-card, .cat-box');
 
-        productCards.forEach(card => {
+        tiltCards.forEach(card => {
             card.addEventListener('mousemove', (e) => {
                 const rect = card.getBoundingClientRect();
                 const x = e.clientX - rect.left;
@@ -1494,9 +1653,8 @@
                 const centerX = rect.width / 2;
                 const centerY = rect.height / 2;
 
-                // Sensitivity
-                const rotateX = (y - centerY) / 8;
-                const rotateY = (centerX - x) / 8;
+                const rotateX = (y - centerY) / 10;
+                const rotateY = (centerX - x) / 10;
 
                 card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
             });
@@ -1525,6 +1683,41 @@
             }
         `;
         document.head.appendChild(style);
+
+
+
+        // --- USER'S ORIGINAL CATEGORY SLIDER REPAINTED ---
+        const catS_grid = document.getElementById('catGrid');
+        const catS_prevBtn = document.getElementById('catPrevBtn');
+        const catS_nextBtn = document.getElementById('catNextBtn');
+        const catS_pagText = document.getElementById('catPaginationText');
+
+        let catS_currentSlide = 0;
+        const catS_totalSlides = document.querySelectorAll('.slide-group').length;
+
+        function updateCatSlider() {
+            const totalCards = document.querySelectorAll('.category-card').length;
+            catS_grid.style.transform = `translateX(-${catS_currentSlide * 100}%)`;
+            catS_pagText.innerText = `Slide ${catS_currentSlide + 1} / ${catS_totalSlides} | Total Categories: ${totalCards}`;
+            catS_prevBtn.classList.toggle('disabled', catS_currentSlide === 0);
+            catS_nextBtn.classList.toggle('disabled', catS_currentSlide === catS_totalSlides - 1);
+        }
+
+        catS_nextBtn.addEventListener('click', () => {
+            if (catS_currentSlide < catS_totalSlides - 1) {
+                catS_currentSlide++;
+                updateCatSlider();
+            }
+        });
+
+        catS_prevBtn.addEventListener('click', () => {
+            if (catS_currentSlide > 0) {
+                catS_currentSlide--;
+                updateCatSlider();
+            }
+        });
+
+        updateCatSlider();
 
     </script>
 </body>
