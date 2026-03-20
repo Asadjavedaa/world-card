@@ -1,0 +1,324 @@
+/* checkout.css - Premium E-commerce Design System */
+:root {
+  /* Colors */
+  --primary: #6366f1; /* Indigo */
+  --primary-hover: #4f46e5;
+  --bg-dark: #0f172a; /* Slate 900 */
+  --bg-card: #1e293b; /* Slate 800 */
+  --bg-surface: #334155; /* Slate 700 */
+  --text-main: #f8fafc; /* Slate 50 */
+  --text-muted: #94a3b8; /* Slate 400 */
+  --border: rgba(255, 255, 255, 0.1);
+  --success: #22c55e;
+  
+  /* Glassmorphism */
+  --glass: rgba(255, 255, 255, 0.05);
+  --glass-blur: blur(10px);
+  
+  /* Typography */
+  --font-family: 'Outfit', 'Inter', sans-serif;
+  
+  /* Transitions */
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Typography Utilities */
+.heading-l { font-size: 2.5rem; font-weight: 700; line-height: 1.2; }
+.heading-m { font-size: 1.5rem; font-weight: 600; }
+.text-s { font-size: 0.875rem; color: var(--text-muted); }
+
+/* BEM Components: Checkout */
+.checkout {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 32px;
+  align-items: start;
+}
+
+@media (max-width: 968px) {
+  .checkout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Product Detail Section */
+.product {
+  background: var(--bg-card);
+  border-radius: 24px;
+  padding: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 768px) {
+  .product {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+}
+
+.product__gallery {
+  position: relative;
+}
+
+.product__image {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 16px;
+  background-color: var(--bg-surface);
+}
+
+.product__details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.product__tags {
+  display: flex;
+  gap: 8px;
+}
+
+.tag {
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: var(--glass);
+  border: 1px solid var(--border);
+}
+
+.product__rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fbbf24; /* Amber 400 */
+}
+
+.product__price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* Interactive Add to Cart Component */
+.add-to-cart {
+  margin-top: 12px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+  width: 100%;
+}
+
+.btn--primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn--primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+}
+
+/* Quantity Selector */
+.quantity-selector {
+  display: none; /* hidden by default */
+  align-items: center;
+  gap: 20px;
+  background: var(--bg-surface);
+  padding: 8px;
+  border-radius: 12px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.quantity-selector.is-active {
+  display: flex;
+  animation: slideUp 0.3s ease-out;
+}
+
+.quantity-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: white;
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.quantity-btn:hover {
+  background: var(--primary);
+}
+
+.quantity-value {
+  font-size: 1.25rem;
+  font-weight: 600;
+  min-width: 2rem;
+  text-align: center;
+}
+
+/* Payment Method Section */
+.section {
+  margin-top: 32px;
+}
+
+.section__title {
+  margin-bottom: 20px;
+}
+
+.payment-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+}
+
+.payment-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  transition: var(--transition);
+  position: relative;
+}
+
+.payment-card:hover {
+  background: var(--bg-surface);
+}
+
+.payment-card.is-selected {
+  border-color: var(--primary);
+  background: rgba(99, 102, 241, 0.1);
+}
+
+.payment-card input {
+  position: absolute;
+  opacity: 0;
+}
+
+.payment-card__icon {
+  font-size: 1.5rem;
+  opacity: 0.8;
+}
+
+.payment-card__name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Order Summary */
+.summary {
+  background: var(--bg-card);
+  border-radius: 24px;
+  padding: 32px;
+  border: 1px solid var(--border);
+  position: sticky;
+  top: 40px;
+}
+
+.summary__row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  color: var(--text-muted);
+}
+
+.summary__row--total {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  color: var(--text-main);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.summary__btn {
+  margin-top: 24px;
+}
+
+/* Success State */
+.success-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  text-align: center;
+}
+
+.success-overlay.is-active {
+  display: flex;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.success-content {
+  background: var(--bg-card);
+  padding: 48px;
+  border-radius: 32px;
+  border: 1px solid var(--border);
+  max-width: 400px;
+}
+
+.success-icon {
+  font-size: 64px;
+  color: var(--success);
+  margin-bottom: 24px;
+}
+
+/* Animations */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Checkout - World Card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="checkout.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <div class="container">
+    <header class="header">
+      <h1 class="heading-l">Complete Your Purchase</h1>
+      <p class="text-s">Review your items and select a payment method.</p>
+    </header>
+
+    <main class="checkout">
+      <div class="checkout__main">
+        <!-- Product Detail Section -->
+        <section class="product">
+          <div class="product__gallery">
+            <img src="product.png" alt="Premium Smartwatch" class="product__image">
+            <div class="product__tags">
+              <span class="tag">New Arrival</span>
+              <span class="tag">Free Shipping</span>
+            </div>
+          </div>
+          
+          <div class="product__details">
+            <div class="product__rating">
+              <i data-lucide="star" fill="currentColor"></i>
+              <i data-lucide="star" fill="currentColor"></i>
+              <i data-lucide="star" fill="currentColor"></i>
+              <i data-lucide="star" fill="currentColor"></i>
+              <i data-lucide="star" fill="currentColor"></i>
+              <span class="text-s">(128 Reviews)</span>
+            </div>
+            
+            <h2 class="heading-m">Aura Pro - Midnight Edition</h2>
+            <p class="product__price">$299.00</p>
+            
+            <p class="text-s">Experience the pinnacle of wearable technology. The Aura Pro combines elegant design with advanced health tracking and a stunning OLED display.</p>
+            
+            <div class="add-to-cart">
+              <button id="addBtn" class="btn btn--primary">
+                Add to Cart
+              </button>
+              
+              <div id="qtySelector" class="quantity-selector">
+                <button class="quantity-btn" onclick="updateQty(-1)">-</button>
+                <span id="qtyValue" class="quantity-value">1</span>
+                <button class="quantity-btn" onclick="updateQty(1)">+</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Payment Method Section -->
+        <section class="section">
+          <h3 class="heading-m section__title">Select Payment Method</h3>
+          <div class="payment-methods">
+            <label class="payment-card is-selected" onclick="selectPayment(this)">
+              <input type="radio" name="payment" value="card" checked>
+              <i data-lucide="credit-card" class="payment-card__icon"></i>
+              <span class="payment-card__name">Credit/Debit Card</span>
+            </label>
+            
+            <label class="payment-card" onclick="selectPayment(this)">
+              <input type="radio" name="payment" value="jazzcash">
+              <i data-lucide="wallet" class="payment-card__icon"></i>
+              <span class="payment-card__name">JazzCash / EasyPaisa</span>
+            </label>
+            
+            <label class="payment-card" onclick="selectPayment(this)">
+              <input type="radio" name="payment" value="cod">
+              <i data-lucide="truck" class="payment-card__icon"></i>
+              <span class="payment-card__name">Cash on Delivery</span>
+            </label>
+          </div>
+        </section>
+      </div>
+
+      <!-- Order Summary -->
+      <aside class="summary">
+        <h3 class="heading-m section__title">Order Summary</h3>
+        <div class="summary__content">
+          <div class="summary__row">
+            <span>Subtotal</span>
+            <span id="subtotal">$299.00</span>
+          </div>
+          <div class="summary__row">
+            <span>Shipping</span>
+            <span>$0.00</span>
+          </div>
+          <div class="summary__row">
+            <span>Estimated Tax</span>
+            <span>$15.00</span>
+          </div>
+          <div class="summary__row summary__row--total">
+            <span>Total</span>
+            <span id="total">$314.00</span>
+          </div>
+          
+          <button id="confirmBtn" class="btn btn--primary summary__btn">
+            Confirm Order
+          </button>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <!-- Success Overlay -->
+  <div id="successOverlay" class="success-overlay">
+    <div class="success-content">
+      <i data-lucide="check-circle" class="success-icon"></i>
+      <h2 class="heading-m">Order Confirmed!</h2>
+      <p class="text-s">Your order #77123 has been placed successfully. You will receive a confirmation email shortly.</p>
+      <button class="btn btn--primary" style="margin-top: 24px;" onclick="location.reload()">Return to Shop</button>
+    </div>
+  </div>
+
+  <script src="checkout.js"></script>
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+  </script>
+</body>
+</html>
