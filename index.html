@@ -1008,7 +1008,7 @@
 
 
 
-         .slider-container {
+        .slider-container {
             background-color: #ffffff;
             width: 100%;
             max-width: 1400px;
@@ -1047,7 +1047,9 @@
             transition: 0.3s;
         }
 
-        .category-card:hover { transform: translateY(-5px); }
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
 
         .image-wrapper {
             width: 120px;
@@ -1059,8 +1061,17 @@
             margin-bottom: 12px;
         }
 
-        .image-wrapper img { width: 100%; height: 100%; object-fit: cover; }
-        .category-name { font-size: 13px; font-weight: 600; color: #1a1a1a; }
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .category-name {
+            font-size: 13px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
 
         .nav-btn {
             position: absolute;
@@ -1076,11 +1087,22 @@
             align-items: center;
             cursor: pointer;
             z-index: 10;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        .nav-btn.prev { left: 5px; }
-        .nav-btn.next { right: 5px; }
-        .nav-btn.disabled { opacity: 0.3; cursor: not-allowed; pointer-events: none; }
+
+        .nav-btn.prev {
+            left: 5px;
+        }
+
+        .nav-btn.next {
+            right: 5px;
+        }
+
+        .nav-btn.disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
 
         .slider-footer {
             margin-top: 20px;
@@ -1088,6 +1110,7 @@
             font-size: 12px;
             color: #888;
         }
+
         /* --- CART DRAWER --- */
         .cart-drawer {
             position: fixed;
@@ -1281,8 +1304,15 @@
         }
 
         @keyframes modalScale {
-            from { transform: scale(0.8); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
 
         .modal-close {
@@ -1305,7 +1335,7 @@
 
         .modal-img img {
             max-width: 100%;
-            filter: drop-shadow(10px 10px 20px rgba(0,0,0,0.1));
+            filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.1));
         }
 
         .modal-info {
@@ -1371,7 +1401,7 @@
         .overlay {
             position: fixed;
             inset: 0;
-            background: rgba(0,0,0,0.5);
+            background: rgba(0, 0, 0, 0.5);
             z-index: 2050;
             display: none;
         }
@@ -1385,6 +1415,7 @@
                 width: 100%;
                 right: -100%;
             }
+
             .modal-content {
                 grid-template-columns: 1fr;
                 max-height: 90vh;
@@ -1466,7 +1497,7 @@
             <li><a href="#">Travel & Bags</a></li>
             <li><a href="#">Jewelry</a></li>
             <li><a href="#">Pet Supplies</a></li>
-            <li><a href="#">Groceries</a></li> 
+            <li><a href="#">Groceries</a></li>
         </ul>
     </nav>
 
@@ -1566,36 +1597,108 @@
 
         <div class="grid-wrapper">
             <div class="category-grid" id="catGrid">
-                
+
                 <div class="slide-group">
-                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=1"></div><span class="category-name">Home Decor</span></div>
-                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=2"></div><span class="category-name">Laptop</span></div>
-                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=3"></div><span class="category-name">Bedding</span></div>
-                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=4"></div><span class="category-name">Tools</span></div>
-                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=5"></div><span class="category-name">Kitchen</span></div>
-                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=6"></div><span class="category-name">Office</span></div>
-                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=7"></div><span class="category-name">Pets</span></div>
-                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=8"></div><span class="category-name">Network</span></div>
-                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=9"></div><span class="category-name">Baby</span></div>
-                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=10"></div><span class="category-name">Watches</span></div>
-                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=11"></div><span class="category-name">Generators</span></div>
-                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=12"></div><span class="category-name">Handmade</span></div>
-                    
+                    <div class="category-card">
+                        <div class="image-wrapper"><img src="https://picsum.photos/200?random=1"></div><span
+                            class="category-name">Home Decor</span>
+                    </div>
+                    <div class="category-card">
+                        <div class="image-wrapper"><img src="https://picsum.photos/200?random=2"></div><span
+                            class="category-name">Laptop</span>
+                    </div>
+                    <div class="category-card">
+                        <div class="image-wrapper"><img src="https://picsum.photos/200?random=3"></div><span
+                            class="category-name">Bedding</span>
+                    </div>
+                    <div class="category-card">
+                        <div class="image-wrapper"><img src="https://picsum.photos/200?random=4"></div><span
+                            class="category-name">Tools</span>
+                    </div>
+                    <div class="category-card">
+                        <div class="image-wrapper"><img src="https://picsum.photos/200?random=5"></div><span
+                            class="category-name">Kitchen</span>
+                    </div>
+                    <div class="category-card">
+                        <div class="image-wrapper"><img src="https://picsum.photos/200?random=6"></div><span
+                            class="category-name">Office</span>
+                    </div>
+                    <div class="category-card">
+                        <div class="image-wrapper"><img src="https://picsum.photos/200?random=7"></div><span
+                            class="category-name">Pets</span>
+                    </div>
+                    <div class="category-card">
+                        <div class="image-wrapper"><img src="https://picsum.photos/200?random=8"></div><span
+                            class="category-name">Network</span>
+                    </div>
+                    <div class="category-card">
+                        <div class="image-wrapper"><img src="https://picsum.photos/200?random=9"></div><span
+                            class="category-name">Baby</span>
+                    </div>
+                    <div class="category-card">
+                        <div class="image-wrapper"><img src="https://picsum.photos/200?random=10"></div><span
+                            class="category-name">Watches</span>
+                    </div>
+                    <div class="category-card">
+                        <div class="image-wrapper"><img src="https://picsum.photos/200?random=11"></div><span
+                            class="category-name">Generators</span>
+                    </div>
+                    <div class="category-card">
+                        <div class="image-wrapper"><img src="https://picsum.photos/200?random=12"></div><span
+                            class="category-name">Handmade</span>
+                    </div>
+
                 </div>
 
                 <div class="slide-group">
-                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=13"></div><span class="category-name">Fashion</span></div>
-                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=14"></div><span class="category-name">Gaming</span></div>
-                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=15"></div><span class="category-name">Electronics</span></div>
-                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=1"></div><span class="category-name">Home Decor</span></div>
-                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=2"></div><span class="category-name">Laptop</span></div>
-                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=3"></div><span class="category-name">Bedding</span></div>
-                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=4"></div><span class="category-name">Tools</span></div>
-                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=5"></div><span class="category-name">Kitchen</span></div>
-                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=6"></div><span class="category-name">Office</span></div>
-                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=7"></div><span class="category-name">Pets</span></div>
-                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=8"></div><span class="category-name">Network</span></div>
-                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=12"></div><span class="category-name">Handmade</span></div>
+                    <div class="category-card">
+                        <div class="image-wrapper"><img src="https://picsum.photos/200?random=13"></div><span
+                            class="category-name">Fashion</span>
+                    </div>
+                    <div class="category-card">
+                        <div class="image-wrapper"><img src="https://picsum.photos/200?random=14"></div><span
+                            class="category-name">Gaming</span>
+                    </div>
+                    <div class="category-card">
+                        <div class="image-wrapper"><img src="https://picsum.photos/200?random=15"></div><span
+                            class="category-name">Electronics</span>
+                    </div>
+                    <div class="category-card">
+                        <div class="image-wrapper"><img src="https://picsum.photos/200?random=1"></div><span
+                            class="category-name">Home Decor</span>
+                    </div>
+                    <div class="category-card">
+                        <div class="image-wrapper"><img src="https://picsum.photos/200?random=2"></div><span
+                            class="category-name">Laptop</span>
+                    </div>
+                    <div class="category-card">
+                        <div class="image-wrapper"><img src="https://picsum.photos/200?random=3"></div><span
+                            class="category-name">Bedding</span>
+                    </div>
+                    <div class="category-card">
+                        <div class="image-wrapper"><img src="https://picsum.photos/200?random=4"></div><span
+                            class="category-name">Tools</span>
+                    </div>
+                    <div class="category-card">
+                        <div class="image-wrapper"><img src="https://picsum.photos/200?random=5"></div><span
+                            class="category-name">Kitchen</span>
+                    </div>
+                    <div class="category-card">
+                        <div class="image-wrapper"><img src="https://picsum.photos/200?random=6"></div><span
+                            class="category-name">Office</span>
+                    </div>
+                    <div class="category-card">
+                        <div class="image-wrapper"><img src="https://picsum.photos/200?random=7"></div><span
+                            class="category-name">Pets</span>
+                    </div>
+                    <div class="category-card">
+                        <div class="image-wrapper"><img src="https://picsum.photos/200?random=8"></div><span
+                            class="category-name">Network</span>
+                    </div>
+                    <div class="category-card">
+                        <div class="image-wrapper"><img src="https://picsum.photos/200?random=12"></div><span
+                            class="category-name">Handmade</span>
+                    </div>
                 </div>
 
             </div>
@@ -1623,16 +1726,16 @@
             padding: 20px;
             display: flex;
             flex-direction: column;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
             border-radius: 12px;
             min-height: 360px;
             transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
             border: 1px solid #eee;
         }
-        
+
         .discovery-grid .category-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .discovery-grid .category-title {
@@ -1689,12 +1792,21 @@
         }
 
         @media (max-width: 1200px) {
-            .discovery-grid { grid-template-columns: repeat(2, 1fr); padding: 0 30px; }
+            .discovery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 0 30px;
+            }
         }
 
         @media (max-width: 650px) {
-            .discovery-grid { grid-template-columns: 1fr; padding: 0 20px; }
-            .discovery-grid .category-card { min-height: auto; }
+            .discovery-grid {
+                grid-template-columns: 1fr;
+                padding: 0 20px;
+            }
+
+            .discovery-grid .category-card {
+                min-height: auto;
+            }
         }
     </style>
 
@@ -1702,10 +1814,14 @@
         <div class="category-card">
             <h2 class="category-title">Home Decor</h2>
             <div class="image-quad">
-                <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=400" alt="Modern Lamp" class="category-img">
-                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400" alt="Colorful Chair" class="category-img">
-                <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?w=400" alt="Modern Room" class="category-img">
-                <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=400" alt="Minimalist Wall" class="category-img">
+                <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=400" alt="Modern Lamp"
+                    class="category-img">
+                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400" alt="Colorful Chair"
+                    class="category-img">
+                <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?w=400" alt="Modern Room"
+                    class="category-img">
+                <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=400" alt="Minimalist Wall"
+                    class="category-img">
             </div>
             <a href="#" class="discover-link">Discover more</a>
         </div>
@@ -1713,10 +1829,14 @@
         <div class="category-card">
             <h2 class="category-title">Baby Car Toys</h2>
             <div class="image-quad">
-                <img src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=400" alt="Wooden Blocks" class="category-img">
-                <img src="https://images.unsplash.com/photo-1532330393533-443990a51d10?w=400" alt="Classic Toy Car" class="category-img">
-                <img src="https://images.unsplash.com/photo-1515488764276-beab7607c1e6?w=400" alt="Toddler Play" class="category-img">
-                <img src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?w=400" alt="Toy Collection" class="category-img">
+                <img src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=400" alt="Wooden Blocks"
+                    class="category-img">
+                <img src="https://images.unsplash.com/photo-1532330393533-443990a51d10?w=400" alt="Classic Toy Car"
+                    class="category-img">
+                <img src="https://images.unsplash.com/photo-1515488764276-beab7607c1e6?w=400" alt="Toddler Play"
+                    class="category-img">
+                <img src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?w=400" alt="Toy Collection"
+                    class="category-img">
             </div>
             <a href="#" class="discover-link">Discover more</a>
         </div>
@@ -1724,10 +1844,14 @@
         <div class="category-card">
             <h2 class="category-title">Baby Monitors</h2>
             <div class="image-quad">
-                <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=400" alt="Smart Monitor" class="category-img">
-                <img src="https://images.unsplash.com/photo-1532330393533-443990a51d10?w=400" alt="Nursery Tech" class="category-img">
-                <img src="https://images.unsplash.com/photo-1532330393533-443990a51d10?w=400" alt="Baby Gear" class="category-img">
-                <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=400" alt="Audio Monitor" class="category-img">
+                <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=400" alt="Smart Monitor"
+                    class="category-img">
+                <img src="https://images.unsplash.com/photo-1532330393533-443990a51d10?w=400" alt="Nursery Tech"
+                    class="category-img">
+                <img src="https://images.unsplash.com/photo-1532330393533-443990a51d10?w=400" alt="Baby Gear"
+                    class="category-img">
+                <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=400" alt="Audio Monitor"
+                    class="category-img">
             </div>
             <a href="#" class="discover-link">Discover more</a>
         </div>
@@ -1735,10 +1859,14 @@
         <div class="category-card">
             <h2 class="category-title">Kitchen Accessories</h2>
             <div class="image-quad">
-                <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=400" alt="Kitchenware Set" class="category-img">
-                <img src="https://images.unsplash.com/photo-1584346133934-a3afd2a33c4c?w=400" alt="Wooden Utensils" class="category-img">
-                <img src="https://images.unsplash.com/photo-1590794056226-79ef3a8147e1?w=400" alt="Organization" class="category-img">
-                <img src="https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?w=400" alt="Pro Knife" class="category-img">
+                <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=400" alt="Kitchenware Set"
+                    class="category-img">
+                <img src="https://images.unsplash.com/photo-1584346133934-a3afd2a33c4c?w=400" alt="Wooden Utensils"
+                    class="category-img">
+                <img src="https://images.unsplash.com/photo-1590794056226-79ef3a8147e1?w=400" alt="Organization"
+                    class="category-img">
+                <img src="https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?w=400" alt="Pro Knife"
+                    class="category-img">
             </div>
             <a href="#" class="discover-link">Discover more</a>
         </div>
@@ -1746,21 +1874,29 @@
         <div class="category-card">
             <h2 class="category-title">Personal Care</h2>
             <div class="image-quad">
-                <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400" alt="Organic Skincare" class="category-img">
-                <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400" alt="Beauty Spa" class="category-img">
-                <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400" alt="Serum Bottles" class="category-img">
-                <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400" alt="Wellness Products" class="category-img">
+                <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400" alt="Organic Skincare"
+                    class="category-img">
+                <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400" alt="Beauty Spa"
+                    class="category-img">
+                <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400" alt="Serum Bottles"
+                    class="category-img">
+                <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400" alt="Wellness Products"
+                    class="category-img">
             </div>
             <a href="#" class="discover-link">Discover more</a>
         </div>
 
         <div class="category-card">
             <h2 class="category-title">Electronics</h2>
-           <div class="image-quad">
-                <img src="https://images.unsplash.com/photo-1550009158-9ebf69173e03?w=800" alt="Organic Skincare" class="category-img">
-                <img src="https://images.unsplash.com/photo-1550009158-9ebf69173e03?w=800" alt="Beauty Spa" class="category-img">
-                <img src="https://images.unsplash.com/photo-1550009158-9ebf69173e03?w=800" alt="Serum Bottles" class="category-img">
-                <img src="https://images.unsplash.com/photo-1550009158-9ebf69173e03?w=800" alt="Wellness Products" class="category-img">
+            <div class="image-quad">
+                <img src="https://images.unsplash.com/photo-1550009158-9ebf69173e03?w=800" alt="Organic Skincare"
+                    class="category-img">
+                <img src="https://images.unsplash.com/photo-1550009158-9ebf69173e03?w=800" alt="Beauty Spa"
+                    class="category-img">
+                <img src="https://images.unsplash.com/photo-1550009158-9ebf69173e03?w=800" alt="Serum Bottles"
+                    class="category-img">
+                <img src="https://images.unsplash.com/photo-1550009158-9ebf69173e03?w=800" alt="Wellness Products"
+                    class="category-img">
             </div>
             <a href="#" class="discover-link" style="margin-top: auto;">Discover more</a>
         </div>
@@ -1768,10 +1904,14 @@
         <div class="category-card">
             <h2 class="category-title">Inverter Generator</h2>
             <div class="image-quad">
-                <img src="https://images.unsplash.com/photo-1596484552834-6a58f850e0a1?w=400" alt="Compact Power" class="category-img">
-                <img src="https://images.unsplash.com/photo-1620288627223-53302f4e8c74?w=400" alt="Backup Energy" class="category-img">
-                <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=400" alt="Outdoor Power" class="category-img">
-                <img src="https://images.unsplash.com/photo-1620288627223-53302f4e8c74?w=400" alt="Industrial Gear" class="category-img">
+                <img src="https://images.unsplash.com/photo-1596484552834-6a58f850e0a1?w=400" alt="Compact Power"
+                    class="category-img">
+                <img src="https://images.unsplash.com/photo-1620288627223-53302f4e8c74?w=400" alt="Backup Energy"
+                    class="category-img">
+                <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=400" alt="Outdoor Power"
+                    class="category-img">
+                <img src="https://images.unsplash.com/photo-1620288627223-53302f4e8c74?w=400" alt="Industrial Gear"
+                    class="category-img">
             </div>
             <a href="#" class="discover-link">Discover more</a>
         </div>
@@ -1779,10 +1919,14 @@
         <div class="category-card">
             <h2 class="category-title">Hand Made</h2>
             <div class="image-quad">
-                <img src="https://images.unsplash.com/photo-1520408222757-6f9f95d87d5d?w=400" alt="Handmade Pottery" class="category-img">
-                <img src="https://images.unsplash.com/photo-1520408222757-6f9f95d87d5d?w=400" alt="Earthenware" class="category-img">
-                <img src="https://images.unsplash.com/photo-1520408222757-6f9f95d87d5d?w=400" alt="Artisan Jewelry" class="category-img">
-                <img src="https://images.unsplash.com/photo-1520408222757-6f9f95d87d5d?w=400" alt="Canvas Art" class="category-img">
+                <img src="https://images.unsplash.com/photo-1520408222757-6f9f95d87d5d?w=400" alt="Handmade Pottery"
+                    class="category-img">
+                <img src="https://images.unsplash.com/photo-1520408222757-6f9f95d87d5d?w=400" alt="Earthenware"
+                    class="category-img">
+                <img src="https://images.unsplash.com/photo-1520408222757-6f9f95d87d5d?w=400" alt="Artisan Jewelry"
+                    class="category-img">
+                <img src="https://images.unsplash.com/photo-1520408222757-6f9f95d87d5d?w=400" alt="Canvas Art"
+                    class="category-img">
             </div>
             <a href="#" class="discover-link">Discover more</a>
         </div>
@@ -1792,7 +1936,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             const grid = document.getElementById('mainGrid');
             if (!grid) return;
-            
+
             const links = grid.querySelectorAll('.discover-link');
             const images = grid.querySelectorAll('.category-img');
 
@@ -1804,6 +1948,234 @@
                 });
             });
         });
+    </script>
+
+    <!-- Redesigned 3D Category Selection Section -->
+    <style>
+        :root {
+            --yellow-3d: #FFD700;
+            --black-3d: #111111;
+            --white-3d: #ffffff;
+            --font-3d: 'Montserrat', sans-serif;
+            --trans-3d: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .section-3d-wrapper {
+            background-color: #fcfcfc;
+            padding: 100px 20px;
+            overflow: hidden;
+        }
+
+        .category-3d-title-box {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .category-3d-title-box h2 {
+            font-family: var(--font-3d);
+            font-size: 42px;
+            font-weight: 900;
+            color: var(--black-3d);
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin-bottom: 10px;
+        }
+
+        .category-3d-title-box .subtitle-3d {
+            font-size: 16px;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .category-3d-title-box::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 6px;
+            background: var(--yellow-3d);
+            margin: 20px auto 0;
+            border-radius: 3px;
+        }
+
+        .category-3d-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1300px;
+            margin: 0 auto;
+            perspective: 1500px;
+        }
+
+        .category-3d-card {
+            background: var(--white-3d);
+            border: 3px solid var(--black-3d);
+            border-radius: 20px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--trans-3d);
+            position: relative;
+            min-height: 250px;
+            box-shadow: 12px 12px 0px var(--black-3d);
+            transform-style: preserve-3d;
+        }
+
+        .category-3d-card:hover {
+            transform: translate(-8px, -8px) rotateX(4deg) rotateY(-4deg);
+            box-shadow: 20px 20px 0px var(--yellow-3d);
+            background-color: #fff;
+        }
+
+        .category-3d-card .promo-3d {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--yellow-3d);
+            color: var(--black-3d);
+            padding: 6px 14px;
+            font-weight: 800;
+            font-size: 12px;
+            border-radius: 8px;
+            border: 2px solid var(--black-3d);
+            text-transform: uppercase;
+            transform: translateZ(30px);
+        }
+
+        .category-3d-card .img-3d-container {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background: #f0f0f0;
+            margin-bottom: 25px;
+            padding: 10px;
+            border: 2px dashed #ccc;
+            transition: var(--trans-3d);
+            transform: translateZ(20px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .category-3d-card:hover .img-3d-container {
+            border-color: var(--yellow-3d);
+            transform: translateZ(50px) scale(1.1);
+            background: #000;
+        }
+
+        .category-3d-card .img-3d-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            filter: grayscale(20%);
+            transition: var(--trans-3d);
+        }
+
+        .category-3d-card:hover .img-3d-container img {
+            filter: grayscale(0%);
+        }
+
+        .category-3d-card h3 {
+            font-family: var(--font-3d);
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--black-3d);
+            margin: 0;
+            transform: translateZ(40px);
+            transition: var(--trans-3d);
+        }
+
+        .category-3d-card:hover h3 {
+            color: #000;
+            letter-spacing: 1px;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 1100px) {
+            .category-3d-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .category-3d-grid {
+                grid-template-columns: 1fr;
+            }
+            .category-3d-title-box h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+
+    <div class="section-3d-wrapper">
+        <div class="category-3d-title-box">
+            <h2>Explore Our Universe</h2>
+            <p class="subtitle-3d">Step into premium collections curated for your lifestyle</p>
+        </div>
+
+        <div class="category-3d-grid">
+            <div class="category-3d-card" onclick="handleNavigation('Watch')">
+                <span class="promo-3d">50% OFF</span>
+                <div class="img-3d-container">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400" alt="Watch">
+                </div>
+                <h3>Watch</h3>
+            </div>
+
+            <div class="category-3d-card" onclick="handleNavigation('Fashion')">
+                <span class="promo-3d">40% OFF</span>
+                <div class="img-3d-container">
+                    <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=400" alt="Fashion">
+                </div>
+                <h3>Fashion</h3>
+            </div>
+
+            <div class="category-3d-card" onclick="handleNavigation('Beauty')">
+                <span class="promo-3d">60% OFF</span>
+                <div class="img-3d-container">
+                    <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=400" alt="Beauty">
+                </div>
+                <h3>Beauty</h3>
+            </div>
+
+            <div class="category-3d-card" onclick="handleNavigation('Kitchen')">
+                <span class="promo-3d">New Arrival</span>
+                <div class="img-3d-container">
+                    <img src="https://images.unsplash.com/photo-1584346133934-a3afd2a33c4c?w=400" alt="Kitchen">
+                </div>
+                <h3>Kitchen</h3>
+            </div>
+
+            <div class="category-3d-card" onclick="handleNavigation('Sports')">
+                <span class="promo-3d">Best Seller</span>
+                <div class="img-3d-container">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400" alt="Sports">
+                </div>
+                <h3>Sports</h3>
+            </div>
+
+            <div class="category-3d-card" onclick="handleNavigation('Home Decor')">
+                <span class="promo-3d">Limited</span>
+                <div class="img-3d-container">
+                    <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=400" alt="Home Decor">
+                </div>
+                <h3>Home Decor</h3>
+            </div>
+        </div>
+    </div>
+
+    <script id="category-3d-script">
+        if (typeof handleNavigation !== 'function') {
+            function handleNavigation(category) {
+                console.log("3D Navigation triggered for:", category);
+                window.location.hash = category.toLowerCase().replace(/\s+/g, '-');
+            }
+        }
     </script>
 
     <!-- Categories Section -->
@@ -1994,7 +2366,7 @@
                     </div>
                 </div>
             </div>
-             <div class="product-card">
+            <div class="product-card">
                 <div class="badge-tag sale">SALE -50%</div>
                 <div class="wishlist-btn"><i class="far fa-heart"></i></div>
                 <div class="product-img-box">
@@ -2014,7 +2386,7 @@
                     </div>
                 </div>
             </div>
-             <div class="product-card">
+            <div class="product-card">
                 <div class="badge-tag sale">SALE -50%</div>
                 <div class="wishlist-btn"><i class="far fa-heart"></i></div>
                 <div class="product-img-box">
@@ -2067,7 +2439,7 @@
                     </div>
                 </div>
             </div>
-             <div class="testi-card">
+            <div class="testi-card">
                 <p>"The 3D interface is mind-blowing. Shopping at World Cart feels like the future is here. Exceptional
                     product quality and support."</p>
                 <div class="user-info">
@@ -2132,213 +2504,214 @@
                 <i class="fab fa-cc-apple-pay"></i>
             </div>
         </div>
-    <!-- Overlay -->
-    <div class="overlay" id="mainOverlay" onclick="toggleCart()"></div>
+        <!-- Overlay -->
+        <div class="overlay" id="mainOverlay" onclick="toggleCart()"></div>
 
-    <!-- Cart Drawer -->
-    <aside class="cart-drawer" id="cartDrawer">
-        <div class="cart-drawer-header">
-            <h2>Your Shopping Bag</h2>
-            <i class="fas fa-times close-cart" onclick="toggleCart()"></i>
-        </div>
-        
-        <div class="cart-items-container" id="cartItems">
-            <!-- Items injected here -->
-            <div style="text-align: center; margin-top: 50px; color: var(--text-muted);">
-                <i class="fas fa-shopping-basket" style="font-size: 48px; margin-bottom: 20px; display: block;"></i>
-                <p>Your bag is empty. Start shopping!</p>
+        <!-- Cart Drawer -->
+        <aside class="cart-drawer" id="cartDrawer">
+            <div class="cart-drawer-header">
+                <h2>Your Shopping Bag</h2>
+                <i class="fas fa-times close-cart" onclick="toggleCart()"></i>
+            </div>
+
+            <div class="cart-items-container" id="cartItems">
+                <!-- Items injected here -->
+                <div style="text-align: center; margin-top: 50px; color: var(--text-muted);">
+                    <i class="fas fa-shopping-basket" style="font-size: 48px; margin-bottom: 20px; display: block;"></i>
+                    <p>Your bag is empty. Start shopping!</p>
+                </div>
+            </div>
+
+            <div class="cart-drawer-footer">
+                <div id="cartSummary">
+                    <div class="cart-summary-row">
+                        <span>Subtotal</span>
+                        <span id="drawerSubtotal">$0.00</span>
+                    </div>
+                    <div class="cart-summary-row">
+                        <span>Shipping</span>
+                        <span id="drawerShipping">$0.00</span>
+                    </div>
+                    <div class="cart-summary-row total">
+                        <span>Total Amount</span>
+                        <span id="drawerTotal">$0.00</span>
+                    </div>
+                </div>
+
+                <!-- Payment Methods Section (Hidden until Checkout clicked) -->
+                <div class="payment-section" id="paymentSection">
+                    <h4 style="margin-bottom: 15px;">Select Payment Method</h4>
+                    <div class="payment-option selected" onclick="selectPaymentOption(this)">
+                        <i class="fas fa-credit-card"></i>
+                        <span>Credit / Debit Card</span>
+                    </div>
+                    <div class="payment-option" onclick="selectPaymentOption(this)">
+                        <i class="fas fa-wallet"></i>
+                        <span>JazzCash / EasyPaisa</span>
+                    </div>
+                    <div class="payment-option" onclick="selectPaymentOption(this)">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <span>Cash on Delivery</span>
+                    </div>
+                </div>
+
+                <button class="checkout-btn" id="mainActionBtn" onclick="handleMainAction()">
+                    Proceed to Checkout
+                </button>
+            </div>
+        </aside>
+
+        <!-- Product Detail Modal -->
+        <div class="modal" id="productModal">
+            <div class="modal-content">
+                <i class="fas fa-times modal-close" onclick="closeProductModal()"></i>
+                <div class="modal-img">
+                    <img id="modalImg" src="product.png" alt="Product">
+                </div>
+                <div class="modal-info">
+                    <div class="badge-tag">BEST SELLER</div>
+                    <h2 id="modalTitle">Elite Pro Headphones</h2>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <span>(128 Reviews)</span>
+                    </div>
+                    <div class="modal-price" id="modalPrice">$299.00</div>
+                    <p class="modal-description">
+                        Experience the future of premium audio with our latest 3D spatial sound technology.
+                        Crafted for comfort and tuned for perfection, these headphones deliver an unmatched
+                        listening experience for professionals and enthusiasts alike.
+                    </p>
+                    <div class="modal-actions">
+                        <button class="btn-slide" style="border:none; cursor:pointer;" onclick="addItemFromModal()">
+                            Add to Bag - <span id="btnPrice">$299.00</span>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="cart-drawer-footer">
-            <div id="cartSummary">
-                <div class="cart-summary-row">
-                    <span>Subtotal</span>
-                    <span id="drawerSubtotal">$0.00</span>
-                </div>
-                <div class="cart-summary-row">
-                    <span>Shipping</span>
-                    <span id="drawerShipping">$0.00</span>
-                </div>
-                <div class="cart-summary-row total">
-                    <span>Total Amount</span>
-                    <span id="drawerTotal">$0.00</span>
-                </div>
-            </div>
+        <footer>
 
-            <!-- Payment Methods Section (Hidden until Checkout clicked) -->
-            <div class="payment-section" id="paymentSection">
-                <h4 style="margin-bottom: 15px;">Select Payment Method</h4>
-                <div class="payment-option selected" onclick="selectPaymentOption(this)">
-                    <i class="fas fa-credit-card"></i>
-                    <span>Credit / Debit Card</span>
-                </div>
-                <div class="payment-option" onclick="selectPaymentOption(this)">
-                    <i class="fas fa-wallet"></i>
-                    <span>JazzCash / EasyPaisa</span>
-                </div>
-                <div class="payment-option" onclick="selectPaymentOption(this)">
-                    <i class="fas fa-money-bill-wave"></i>
-                    <span>Cash on Delivery</span>
-                </div>
-            </div>
+            <!-- JavaScript Logic -->
+            <script>
+                // --- Slider Implementation ---
+                const slides = document.querySelectorAll('.slide');
+                const dotsContainer = document.getElementById('sliderDots');
+                let currentSlide = 0;
+                let slideInterval;
 
-            <button class="checkout-btn" id="mainActionBtn" onclick="handleMainAction()">
-                Proceed to Checkout
-            </button>
-        </div>
-    </aside>
+                // Initialize Dots
+                slides.forEach((_, i) => {
+                    const dot = document.createElement('div');
+                    dot.classList.add('dot');
+                    if (i === 0) dot.classList.add('active');
+                    dot.addEventListener('click', () => goToSlide(i));
+                    dotsContainer.appendChild(dot);
+                });
 
-    <!-- Product Detail Modal -->
-    <div class="modal" id="productModal">
-        <div class="modal-content">
-            <i class="fas fa-times modal-close" onclick="closeProductModal()"></i>
-            <div class="modal-img">
-                <img id="modalImg" src="product.png" alt="Product">
-            </div>
-            <div class="modal-info">
-                <div class="badge-tag">BEST SELLER</div>
-                <h2 id="modalTitle">Elite Pro Headphones</h2>
-                <div class="rating">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    <span>(128 Reviews)</span>
-                </div>
-                <div class="modal-price" id="modalPrice">$299.00</div>
-                <p class="modal-description">
-                    Experience the future of premium audio with our latest 3D spatial sound technology. 
-                    Crafted for comfort and tuned for perfection, these headphones deliver an unmatched 
-                    listening experience for professionals and enthusiasts alike.
-                </p>
-                <div class="modal-actions">
-                    <button class="btn-slide" style="border:none; cursor:pointer;" onclick="addItemFromModal()">
-                        Add to Bag - <span id="btnPrice">$299.00</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
+                const dots = document.querySelectorAll('.dot');
 
-    <footer>
-
-    <!-- JavaScript Logic -->
-    <script>
-        // --- Slider Implementation ---
-        const slides = document.querySelectorAll('.slide');
-        const dotsContainer = document.getElementById('sliderDots');
-        let currentSlide = 0;
-        let slideInterval;
-
-        // Initialize Dots
-        slides.forEach((_, i) => {
-            const dot = document.createElement('div');
-            dot.classList.add('dot');
-            if (i === 0) dot.classList.add('active');
-            dot.addEventListener('click', () => goToSlide(i));
-            dotsContainer.appendChild(dot);
-        });
-
-        const dots = document.querySelectorAll('.dot');
-
-        function updateSlider() {
-            slides.forEach((slide, i) => {
-                slide.classList.toggle('active', i === currentSlide);
-            });
-            dots.forEach((dot, i) => {
-                dot.classList.toggle('active', i === currentSlide);
-            });
-        }
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % slides.length;
-            updateSlider();
-            resetInterval();
-        }
-
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            updateSlider();
-            resetInterval();
-        }
-
-        function goToSlide(n) {
-            currentSlide = n;
-            updateSlider();
-            resetInterval();
-        }
-
-        function resetInterval() {
-            clearInterval(slideInterval);
-            slideInterval = setInterval(nextSlide, 5000);
-        }
-
-        resetInterval();
-
-        // --- Search Functionality ---
-        const searchInput = document.getElementById('searchInput');
-        const productGrid = document.getElementById('productGrid');
-        const cards = document.querySelectorAll('.product-card');
-
-        searchInput.addEventListener('input', (e) => {
-            const query = e.target.value.toLowerCase();
-            cards.forEach(card => {
-                const title = card.querySelector('h3').textContent.toLowerCase();
-                if (title.includes(query)) {
-                    card.style.display = 'block';
-                    card.style.animation = 'fadeIn 0.5s forwards';
-                } else {
-                    card.style.display = 'none';
+                function updateSlider() {
+                    slides.forEach((slide, i) => {
+                        slide.classList.toggle('active', i === currentSlide);
+                    });
+                    dots.forEach((dot, i) => {
+                        dot.classList.toggle('active', i === currentSlide);
+                    });
                 }
-            });
-        });
 
-        // --- Cart Logic ---
-        let cart = [];
-        const cartCountEl = document.getElementById('cartCount');
-        const cartDrawer = document.getElementById('cartDrawer');
-        const mainOverlay = document.getElementById('mainOverlay');
-        const cartItemsContainer = document.getElementById('cartItems');
-        const drawerSubtotal = document.getElementById('drawerSubtotal');
-        const drawerTotal = document.getElementById('drawerTotal');
-        const mainActionBtn = document.getElementById('mainActionBtn');
-        const paymentSection = document.getElementById('paymentSection');
-        const cartSummary = document.getElementById('cartSummary');
+                function nextSlide() {
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    updateSlider();
+                    resetInterval();
+                }
 
-        function toggleCart() {
-            cartDrawer.classList.toggle('open');
-            mainOverlay.classList.toggle('active');
-            
-            // Revert state if closing
-            if (!cartDrawer.classList.contains('open')) {
-                resetCheckoutState();
-            }
-        }
+                function prevSlide() {
+                    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                    updateSlider();
+                    resetInterval();
+                }
 
-        function addToCart(name, price, img) {
-            const existingItem = cart.find(item => item.name === name);
-            if (existingItem) {
-                existingItem.qty++;
-            } else {
-                cart.push({ name, price: parseFloat(price.replace('$', '')), qty: 1, img: img || 'banner4.webp' });
-            }
-            
-            updateCartUI();
-            showNotification(`${name} added to cart!`);
-        }
+                function goToSlide(n) {
+                    currentSlide = n;
+                    updateSlider();
+                    resetInterval();
+                }
 
-        function updateCartUI() {
-            // Update Icon Badge
-            const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
-            cartCountEl.textContent = totalQty;
+                function resetInterval() {
+                    clearInterval(slideInterval);
+                    slideInterval = setInterval(nextSlide, 5000);
+                }
 
-            // Populate Drawer Items
-            if (cart.length === 0) {
-                cartItemsContainer.innerHTML = `
+                resetInterval();
+
+                // --- Search Functionality ---
+                const searchInput = document.getElementById('searchInput');
+                const productGrid = document.getElementById('productGrid');
+                const cards = document.querySelectorAll('.product-card');
+
+                searchInput.addEventListener('input', (e) => {
+                    const query = e.target.value.toLowerCase();
+                    cards.forEach(card => {
+                        const title = card.querySelector('h3').textContent.toLowerCase();
+                        if (title.includes(query)) {
+                            card.style.display = 'block';
+                            card.style.animation = 'fadeIn 0.5s forwards';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+
+                // --- Cart Logic ---
+                let cart = [];
+                const cartCountEl = document.getElementById('cartCount');
+                const cartDrawer = document.getElementById('cartDrawer');
+                const mainOverlay = document.getElementById('mainOverlay');
+                const cartItemsContainer = document.getElementById('cartItems');
+                const drawerSubtotal = document.getElementById('drawerSubtotal');
+                const drawerTotal = document.getElementById('drawerTotal');
+                const mainActionBtn = document.getElementById('mainActionBtn');
+                const paymentSection = document.getElementById('paymentSection');
+                const cartSummary = document.getElementById('cartSummary');
+
+                function toggleCart() {
+                    cartDrawer.classList.toggle('open');
+                    mainOverlay.classList.toggle('active');
+
+                    // Revert state if closing
+                    if (!cartDrawer.classList.contains('open')) {
+                        resetCheckoutState();
+                    }
+                }
+
+                function addToCart(name, price, img) {
+                    const existingItem = cart.find(item => item.name === name);
+                    if (existingItem) {
+                        existingItem.qty++;
+                    } else {
+                        cart.push({ name, price: parseFloat(price.replace('$', '')), qty: 1, img: img || 'banner4.webp' });
+                    }
+
+                    updateCartUI();
+                    showNotification(`${name} added to cart!`);
+                }
+
+                function updateCartUI() {
+                    // Update Icon Badge
+                    const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+                    cartCountEl.textContent = totalQty;
+
+                    // Populate Drawer Items
+                    if (cart.length === 0) {
+                        cartItemsContainer.innerHTML = `
                     <div style="text-align: center; margin-top: 50px; color: var(--text-muted);">
                         <i class="fas fa-shopping-basket" style="font-size: 48px; margin-bottom: 20px; display: block;"></i>
                         <p>Your bag is empty. Start shopping!</p>
                     </div>`;
-            } else {
-                cartItemsContainer.innerHTML = cart.map((item, index) => `
+                    } else {
+                        cartItemsContainer.innerHTML = cart.map((item, index) => `
                     <div class="cart-item">
                         <img src="${item.img}" alt="${item.name}" class="cart-item-img">
                         <div class="cart-item-info">
@@ -2353,206 +2726,206 @@
                         <i class="fas fa-trash" style="color:#ff6b6b; cursor:pointer;" onclick="removeItem(${index})"></i>
                     </div>
                 `).join('');
-            }
+                    }
 
-            // Update Summaries
-            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
-            drawerSubtotal.textContent = `$${subtotal.toFixed(2)}`;
-            drawerTotal.textContent = `$${subtotal.toFixed(2)}`;
-        }
+                    // Update Summaries
+                    const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+                    drawerSubtotal.textContent = `$${subtotal.toFixed(2)}`;
+                    drawerTotal.textContent = `$${subtotal.toFixed(2)}`;
+                }
 
-        function changeQty(index, delta) {
-            cart[index].qty += delta;
-            if (cart[index].qty < 1) {
-                cart.splice(index, 1);
-            }
-            updateCartUI();
-        }
-
-        function removeItem(index) {
-            cart.splice(index, 1);
-            updateCartUI();
-        }
-
-        function showNotification(msg) {
-            const noti = document.getElementById('notification');
-            const notiMsg = document.getElementById('noti-msg');
-            notiMsg.textContent = msg;
-            noti.classList.add('show-noti');
-            setTimeout(() => noti.classList.remove('show-noti'), 3000);
-        }
-
-        // --- Checkout Flow Logic ---
-        let isCheckoutMode = false;
-
-        function handleMainAction() {
-            if (cart.length === 0) return;
-
-            if (!isCheckoutMode) {
-                // Enter Checkout Mode
-                isCheckoutMode = true;
-                paymentSection.classList.add('active');
-                cartItemsContainer.style.display = 'none';
-                mainActionBtn.textContent = "Confirm Order";
-                mainActionBtn.style.background = "#FFC107";
-                mainActionBtn.style.color = "#1A1A1A";
-            } else {
-                // Confirm Order
-                mainActionBtn.textContent = "Processing...";
-                mainActionBtn.disabled = true;
-                setTimeout(() => {
-                    alert("Order Confirmed! Thank you for shopping with World Cart.");
-                    cart = [];
+                function changeQty(index, delta) {
+                    cart[index].qty += delta;
+                    if (cart[index].qty < 1) {
+                        cart.splice(index, 1);
+                    }
                     updateCartUI();
-                    toggleCart();
-                    mainActionBtn.disabled = false;
-                }, 1500);
-            }
-        }
+                }
 
-        function resetCheckoutState() {
-            isCheckoutMode = false;
-            paymentSection.classList.remove('active');
-            cartItemsContainer.style.display = 'block';
-            mainActionBtn.textContent = "Proceed to Checkout";
-            mainActionBtn.style.background = "#1A1A1A";
-            mainActionBtn.style.color = "#FFC107";
-        }
+                function removeItem(index) {
+                    cart.splice(index, 1);
+                    updateCartUI();
+                }
 
-        function selectPaymentOption(el) {
-            document.querySelectorAll('.payment-option').forEach(opt => opt.classList.remove('selected'));
-            el.classList.add('selected');
-        }
+                function showNotification(msg) {
+                    const noti = document.getElementById('notification');
+                    const notiMsg = document.getElementById('noti-msg');
+                    notiMsg.textContent = msg;
+                    noti.classList.add('show-noti');
+                    setTimeout(() => noti.classList.remove('show-noti'), 3000);
+                }
 
-        // --- Product Modal Logic ---
-        const pModal = document.getElementById('productModal');
-        let currentModalProduct = {};
+                // --- Checkout Flow Logic ---
+                let isCheckoutMode = false;
 
-        function openProductModal(name, price, img) {
-            document.getElementById('modalTitle').textContent = name;
-            document.getElementById('modalPrice').textContent = price;
-            document.getElementById('modalImg').src = img || 'banner4.webp';
-            document.getElementById('btnPrice').textContent = price;
-            currentModalProduct = { name, price, img };
-            pModal.classList.add('open');
-        }
+                function handleMainAction() {
+                    if (cart.length === 0) return;
 
-        function closeProductModal() {
-            pModal.classList.remove('open');
-        }
+                    if (!isCheckoutMode) {
+                        // Enter Checkout Mode
+                        isCheckoutMode = true;
+                        paymentSection.classList.add('active');
+                        cartItemsContainer.style.display = 'none';
+                        mainActionBtn.textContent = "Confirm Order";
+                        mainActionBtn.style.background = "#FFC107";
+                        mainActionBtn.style.color = "#1A1A1A";
+                    } else {
+                        // Confirm Order
+                        mainActionBtn.textContent = "Processing...";
+                        mainActionBtn.disabled = true;
+                        setTimeout(() => {
+                            alert("Order Confirmed! Thank you for shopping with World Cart.");
+                            cart = [];
+                            updateCartUI();
+                            toggleCart();
+                            mainActionBtn.disabled = false;
+                        }, 1500);
+                    }
+                }
 
-        function addItemFromModal() {
-            addToCart(currentModalProduct.name, currentModalProduct.price, currentModalProduct.img);
-            closeProductModal();
-        }
+                function resetCheckoutState() {
+                    isCheckoutMode = false;
+                    paymentSection.classList.remove('active');
+                    cartItemsContainer.style.display = 'block';
+                    mainActionBtn.textContent = "Proceed to Checkout";
+                    mainActionBtn.style.background = "#1A1A1A";
+                    mainActionBtn.style.color = "#FFC107";
+                }
 
-        // --- Link Product Cards to Modal ---
-        document.querySelectorAll('.product-card').forEach(card => {
-            const title = card.querySelector('h3').textContent;
-            const price = card.querySelector('.price').childNodes[0].textContent.trim();
-            const img = card.querySelector('.product-img-box img').src;
-            
-            // Add click listener to Eye icon
-            const eyeBtn = card.querySelector('.fa-eye');
-            if (eyeBtn) {
-                eyeBtn.parentElement.onclick = (e) => {
-                    e.stopPropagation();
-                    openProductModal(title, price, img);
-                };
-            }
-            
-            // Also link the main Add to Cart button to my new logic
-            const addBtn = card.querySelector('.add-to-cart');
-            if (addBtn) {
-                addBtn.onclick = () => addToCart(title, price, img);
-            }
-        });
+                function selectPaymentOption(el) {
+                    document.querySelectorAll('.payment-option').forEach(opt => opt.classList.remove('selected'));
+                    el.classList.add('selected');
+                }
 
-        // --- 3D Hover Effect for Products and Categories ---
-        const tiltCards = document.querySelectorAll('.product-card, .cat-box');
+                // --- Product Modal Logic ---
+                const pModal = document.getElementById('productModal');
+                let currentModalProduct = {};
 
-        tiltCards.forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
+                function openProductModal(name, price, img) {
+                    document.getElementById('modalTitle').textContent = name;
+                    document.getElementById('modalPrice').textContent = price;
+                    document.getElementById('modalImg').src = img || 'banner4.webp';
+                    document.getElementById('btnPrice').textContent = price;
+                    currentModalProduct = { name, price, img };
+                    pModal.classList.add('open');
+                }
 
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
+                function closeProductModal() {
+                    pModal.classList.remove('open');
+                }
 
-                const rotateX = (y - centerY) / 10;
-                const rotateY = (centerX - x) / 10;
+                function addItemFromModal() {
+                    addToCart(currentModalProduct.name, currentModalProduct.price, currentModalProduct.img);
+                    closeProductModal();
+                }
 
-                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
-            });
+                // --- Link Product Cards to Modal ---
+                document.querySelectorAll('.product-card').forEach(card => {
+                    const title = card.querySelector('h3').textContent;
+                    const price = card.querySelector('.price').childNodes[0].textContent.trim();
+                    const img = card.querySelector('.product-img-box img').src;
 
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = `perspective(1000px) rotateX(0) rotateY(0) translateY(0)`;
-            });
-        });
+                    // Add click listener to Eye icon
+                    const eyeBtn = card.querySelector('.fa-eye');
+                    if (eyeBtn) {
+                        eyeBtn.parentElement.onclick = (e) => {
+                            e.stopPropagation();
+                            openProductModal(title, price, img);
+                        };
+                    }
 
-        // --- Header Scroll Animation ---
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('mainHeader');
-            if (window.scrollY > 100) {
-                header.classList.add('header-scrolled');
-            } else {
-                header.classList.remove('header-scrolled');
-            }
-        });
+                    // Also link the main Add to Cart button to my new logic
+                    const addBtn = card.querySelector('.add-to-cart');
+                    if (addBtn) {
+                        addBtn.onclick = () => addToCart(title, price, img);
+                    }
+                });
 
-        // --- Fade In Animation for JS filtering ---
-        const style = document.createElement('style');
-        style.textContent = `
+                // --- 3D Hover Effect for Products and Categories ---
+                const tiltCards = document.querySelectorAll('.product-card, .cat-box');
+
+                tiltCards.forEach(card => {
+                    card.addEventListener('mousemove', (e) => {
+                        const rect = card.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
+
+                        const centerX = rect.width / 2;
+                        const centerY = rect.height / 2;
+
+                        const rotateX = (y - centerY) / 10;
+                        const rotateY = (centerX - x) / 10;
+
+                        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
+                    });
+
+                    card.addEventListener('mouseleave', () => {
+                        card.style.transform = `perspective(1000px) rotateX(0) rotateY(0) translateY(0)`;
+                    });
+                });
+
+                // --- Header Scroll Animation ---
+                window.addEventListener('scroll', () => {
+                    const header = document.getElementById('mainHeader');
+                    if (window.scrollY > 100) {
+                        header.classList.add('header-scrolled');
+                    } else {
+                        header.classList.remove('header-scrolled');
+                    }
+                });
+
+                // --- Fade In Animation for JS filtering ---
+                const style = document.createElement('style');
+                style.textContent = `
             @keyframes fadeIn {
                 from { opacity: 0; transform: translateY(20px); }
                 to { opacity: 1; transform: translateY(0); }
             }
         `;
-        document.head.appendChild(style);
+                document.head.appendChild(style);
 
 
 
-        // --- USER'S ORIGINAL CATEGORY SLIDER REPAINTED ---
-        const catS_grid = document.getElementById('catGrid');
-        const catS_prevBtn = document.getElementById('catPrevBtn');
-        const catS_nextBtn = document.getElementById('catNextBtn');
-        const catS_pagText = document.getElementById('catPaginationText');
+                // --- USER'S ORIGINAL CATEGORY SLIDER REPAINTED ---
+                const catS_grid = document.getElementById('catGrid');
+                const catS_prevBtn = document.getElementById('catPrevBtn');
+                const catS_nextBtn = document.getElementById('catNextBtn');
+                const catS_pagText = document.getElementById('catPaginationText');
 
-        let catS_currentSlide = 0;
-        const catS_totalSlides = document.querySelectorAll('.slide-group').length;
+                let catS_currentSlide = 0;
+                const catS_totalSlides = document.querySelectorAll('.slide-group').length;
 
-        function updateCatSlider() {
-            const totalCards = document.querySelectorAll('.category-card').length;
-            catS_grid.style.transform = `translateX(-${catS_currentSlide * 100}%)`;
-            catS_pagText.innerText = `Slide ${catS_currentSlide + 1} / ${catS_totalSlides} | Total Categories: ${totalCards}`;
-            catS_prevBtn.classList.toggle('disabled', catS_currentSlide === 0);
-            catS_nextBtn.classList.toggle('disabled', catS_currentSlide === catS_totalSlides - 1);
-        }
+                function updateCatSlider() {
+                    const totalCards = document.querySelectorAll('.category-card').length;
+                    catS_grid.style.transform = `translateX(-${catS_currentSlide * 100}%)`;
+                    catS_pagText.innerText = `Slide ${catS_currentSlide + 1} / ${catS_totalSlides} | Total Categories: ${totalCards}`;
+                    catS_prevBtn.classList.toggle('disabled', catS_currentSlide === 0);
+                    catS_nextBtn.classList.toggle('disabled', catS_currentSlide === catS_totalSlides - 1);
+                }
 
-        catS_nextBtn.addEventListener('click', () => {
-            if (catS_currentSlide < catS_totalSlides - 1) {
-                catS_currentSlide++;
+                catS_nextBtn.addEventListener('click', () => {
+                    if (catS_currentSlide < catS_totalSlides - 1) {
+                        catS_currentSlide++;
+                        updateCatSlider();
+                    }
+                });
+
+                catS_prevBtn.addEventListener('click', () => {
+                    if (catS_currentSlide > 0) {
+                        catS_currentSlide--;
+                        updateCatSlider();
+                    }
+                });
+
                 updateCatSlider();
-            }
-        });
 
-        catS_prevBtn.addEventListener('click', () => {
-            if (catS_currentSlide > 0) {
-                catS_currentSlide--;
-                updateCatSlider();
-            }
-        });
+                // --- Log Action for Features ---
+                function logAction(message) {
+                    console.log("Feature Action:", message);
+                    // Visual feedback could be added here if needed
+                }
 
-        updateCatSlider();
-
-        // --- Log Action for Features ---
-        function logAction(message) {
-            console.log("Feature Action:", message);
-            // Visual feedback could be added here if needed
-        }
-
-    </script>
+            </script>
 </body>
 
 </html>
