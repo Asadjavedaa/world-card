@@ -420,46 +420,88 @@
         }
 
         /* --- FEATURES SECTION --- */
-        .features {
-            padding: 60px 10%;
+        .features-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            width: 100%;
+            padding: 60px 5%;
             background: var(--white);
         }
 
         .feature-card {
-            background: var(--gray-light);
-            padding: 30px;
-            border-radius: var(--radius-main);
-            text-align: center;
-            transition: var(--transition-smooth);
-            border: 1px solid transparent;
-            box-shadow: var(--shadow-sm);
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 35px 25px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            cursor: pointer;
         }
 
         .feature-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
             border-color: var(--primary);
-            box-shadow: var(--shadow-md);
         }
 
-        .feature-card i {
-            font-size: 35px;
-            color: var(--primary);
-            margin-bottom: 20px;
-            display: block;
+        .icon-box {
+            min-width: 68px;
+            height: 68px;
+            background-color: #fff1eb;
+            border-radius: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
         }
 
-        .feature-card h3 {
-            font-size: 18px;
+        .icon-box i {
+            color: #f36d21;
+            font-size: 28px;
+        }
+
+        .feature-card:hover .icon-box {
+            background-color: #f36d21;
+        }
+
+        .feature-card:hover .icon-box i {
+            color: #fff;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .content h3 {
+            font-size: 19px;
             font-weight: 700;
-            margin-bottom: 10px;
+            color: var(--black);
+            margin: 0;
         }
 
-        .feature-card p {
+        .content p {
             font-size: 14px;
             color: var(--text-muted);
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        @media (max-width: 1100px) {
+            .features-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .features-container {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* --- CATEGORIES SECTION --- */
@@ -501,9 +543,12 @@
             position: relative;
             cursor: pointer;
             box-shadow: var(--shadow-md);
+            padding: 0;
+            display: flex;
         }
 
         .cat-card img {
+            display: block;
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -612,9 +657,6 @@
         .product-img-box {
             width: 100%;
             height: 220px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             margin-bottom: 20px;
             background: var(--gray-light);
             border-radius: var(--radius-main);
@@ -623,8 +665,10 @@
         }
 
         .product-img-box img {
-            max-width: 80%;
-            max-height: 80%;
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             transition: var(--transition-smooth);
         }
 
@@ -1408,6 +1452,21 @@
             <li><a href="#">Smart Gadgets</a></li>
             <li><a href="#">Sports</a></li>
             <li><a href="#">Gaming</a></li>
+            <li><a href="#">Mobiles</a></li>
+            <li><a href="#">Laptops</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Watches</a></li>
+            <li><a href="#">Shoes</a></li>
+            <li><a href="#">Beauty Products</a></li>
+            <li><a href="#">Health & Fitness</a></li>
+            <li><a href="#">Kitchen Appliances</a></li>
+            <li><a href="#">Furniture</a></li>
+            <li><a href="#">Books</a></li>
+            <li><a href="#">Kids & Toys</a></li>
+            <li><a href="#">Travel & Bags</a></li>
+            <li><a href="#">Jewelry</a></li>
+            <li><a href="#">Pet Supplies</a></li>
+            <li><a href="#">Groceries</a></li> 
         </ul>
     </nav>
 
@@ -1460,28 +1519,47 @@
     </section>
 
     <!-- Features Section -->
-    <section class="features">
-        <div class="feature-card">
-            <i class="fas fa-truck-fast"></i>
-            <h3>Express Delivery</h3>
-            <p>Get your premium items delivered within 24 hours globally.</p>
+    <div class="features-container">
+        <div class="feature-card" onclick="logAction('Shipping Information Clicked')">
+            <div class="icon-box">
+                <i class="fa-solid fa-paper-plane"></i>
+            </div>
+            <div class="content">
+                <h3>Free Worldwide Shipping</h3>
+                <p>Free shipping for all orders over $100</p>
+            </div>
         </div>
-        <div class="feature-card">
-            <i class="fas fa-shield-halved"></i>
-            <h3>Secure Payment</h3>
-            <p>100% secure encrypted payments with world-class protection.</p>
+
+        <div class="feature-card" onclick="logAction('Guarantee Information Clicked')">
+            <div class="icon-box">
+                <i class="fa-solid fa-rotate-left"></i>
+            </div>
+            <div class="content">
+                <h3>Money Back Guarantee</h3>
+                <p>We return money within 30 days</p>
+            </div>
         </div>
-        <div class="feature-card">
-            <i class="fas fa-arrow-rotate-left"></i>
-            <h3>Easy Returns</h3>
-            <p>30-day no-questions-asked return policy for every product.</p>
+
+        <div class="feature-card" onclick="logAction('Support Information Clicked')">
+            <div class="icon-box">
+                <i class="fa-solid fa-headset"></i>
+            </div>
+            <div class="content">
+                <h3>24/7 Customer Support</h3>
+                <p>Friendly 24/7 customer support</p>
+            </div>
         </div>
-        <div class="feature-card">
-            <i class="fas fa-headset"></i>
-            <h3>24/7 Support</h3>
-            <p>Dedicated customer support team at your service anytime.</p>
+
+        <div class="feature-card" onclick="logAction('Security Information Clicked')">
+            <div class="icon-box">
+                <i class="fa-solid fa-lock"></i>
+            </div>
+            <div class="content">
+                <h3>Secure Online Payment</h3>
+                <p>We possess SSL / Secure Certificate</p>
+            </div>
         </div>
-    </section>
+    </div>
     <div class="slider-container">
         <div class="nav-btn prev" id="catPrevBtn"><i class="fa-solid fa-chevron-left"></i></div>
         <div class="nav-btn next" id="catNextBtn"><i class="fa-solid fa-chevron-right"></i></div>
@@ -1502,12 +1580,22 @@
                     <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=10"></div><span class="category-name">Watches</span></div>
                     <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=11"></div><span class="category-name">Generators</span></div>
                     <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=12"></div><span class="category-name">Handmade</span></div>
+                    
                 </div>
 
                 <div class="slide-group">
                     <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=13"></div><span class="category-name">Fashion</span></div>
                     <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=14"></div><span class="category-name">Gaming</span></div>
                     <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=15"></div><span class="category-name">Electronics</span></div>
+                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=1"></div><span class="category-name">Home Decor</span></div>
+                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=2"></div><span class="category-name">Laptop</span></div>
+                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=3"></div><span class="category-name">Bedding</span></div>
+                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=4"></div><span class="category-name">Tools</span></div>
+                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=5"></div><span class="category-name">Kitchen</span></div>
+                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=6"></div><span class="category-name">Office</span></div>
+                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=7"></div><span class="category-name">Pets</span></div>
+                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=8"></div><span class="category-name">Network</span></div>
+                    <div class="category-card"><div class="image-wrapper"><img src="https://picsum.photos/200?random=12"></div><span class="category-name">Handmade</span></div>
                 </div>
 
             </div>
@@ -1517,6 +1605,206 @@
             <span id="catPaginationText">Slide 1 / 2 | Total Categories: 15</span>
         </div>
     </div>
+
+    <!-- Multi-Category Discovery Section -->
+    <style>
+        .discovery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            width: 100%;
+            max-width: 1400px;
+            margin: 40px auto;
+            padding: 0 50px;
+        }
+
+        .discovery-grid .category-card {
+            background: #ffffff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            border-radius: 12px;
+            min-height: 360px;
+            transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border: 1px solid #eee;
+        }
+        
+        .discovery-grid .category-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .discovery-grid .category-title {
+            font-size: 19px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 14px;
+        }
+
+        .discovery-grid .image-quad {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 12px;
+            flex-grow: 1;
+        }
+
+        .discovery-grid .single-image-container {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: #f8f8f8;
+            border-radius: 8px;
+        }
+
+        .discovery-grid .category-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            border-radius: 6px;
+        }
+
+        .discovery-grid .category-img:hover {
+            transform: scale(1.05);
+        }
+
+        .discovery-grid .discover-link {
+            display: inline-block;
+            margin-top: 14px;
+            color: #FFC107;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .discovery-grid .discover-link:hover {
+            color: #1a1a1a;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 1200px) {
+            .discovery-grid { grid-template-columns: repeat(2, 1fr); padding: 0 30px; }
+        }
+
+        @media (max-width: 650px) {
+            .discovery-grid { grid-template-columns: 1fr; padding: 0 20px; }
+            .discovery-grid .category-card { min-height: auto; }
+        }
+    </style>
+
+    <div class="discovery-grid" id="mainGrid">
+        <div class="category-card">
+            <h2 class="category-title">Home Decor</h2>
+            <div class="image-quad">
+                <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=400" alt="Modern Lamp" class="category-img">
+                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400" alt="Colorful Chair" class="category-img">
+                <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?w=400" alt="Modern Room" class="category-img">
+                <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=400" alt="Minimalist Wall" class="category-img">
+            </div>
+            <a href="#" class="discover-link">Discover more</a>
+        </div>
+
+        <div class="category-card">
+            <h2 class="category-title">Baby Car Toys</h2>
+            <div class="image-quad">
+                <img src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=400" alt="Wooden Blocks" class="category-img">
+                <img src="https://images.unsplash.com/photo-1532330393533-443990a51d10?w=400" alt="Classic Toy Car" class="category-img">
+                <img src="https://images.unsplash.com/photo-1515488764276-beab7607c1e6?w=400" alt="Toddler Play" class="category-img">
+                <img src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?w=400" alt="Toy Collection" class="category-img">
+            </div>
+            <a href="#" class="discover-link">Discover more</a>
+        </div>
+
+        <div class="category-card">
+            <h2 class="category-title">Baby Monitors</h2>
+            <div class="image-quad">
+                <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=400" alt="Smart Monitor" class="category-img">
+                <img src="https://images.unsplash.com/photo-1532330393533-443990a51d10?w=400" alt="Nursery Tech" class="category-img">
+                <img src="https://images.unsplash.com/photo-1532330393533-443990a51d10?w=400" alt="Baby Gear" class="category-img">
+                <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=400" alt="Audio Monitor" class="category-img">
+            </div>
+            <a href="#" class="discover-link">Discover more</a>
+        </div>
+
+        <div class="category-card">
+            <h2 class="category-title">Kitchen Accessories</h2>
+            <div class="image-quad">
+                <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=400" alt="Kitchenware Set" class="category-img">
+                <img src="https://images.unsplash.com/photo-1584346133934-a3afd2a33c4c?w=400" alt="Wooden Utensils" class="category-img">
+                <img src="https://images.unsplash.com/photo-1590794056226-79ef3a8147e1?w=400" alt="Organization" class="category-img">
+                <img src="https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?w=400" alt="Pro Knife" class="category-img">
+            </div>
+            <a href="#" class="discover-link">Discover more</a>
+        </div>
+
+        <div class="category-card">
+            <h2 class="category-title">Personal Care</h2>
+            <div class="image-quad">
+                <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400" alt="Organic Skincare" class="category-img">
+                <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400" alt="Beauty Spa" class="category-img">
+                <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400" alt="Serum Bottles" class="category-img">
+                <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400" alt="Wellness Products" class="category-img">
+            </div>
+            <a href="#" class="discover-link">Discover more</a>
+        </div>
+
+        <div class="category-card">
+            <h2 class="category-title">Electronics</h2>
+           <div class="image-quad">
+                <img src="https://images.unsplash.com/photo-1550009158-9ebf69173e03?w=800" alt="Organic Skincare" class="category-img">
+                <img src="https://images.unsplash.com/photo-1550009158-9ebf69173e03?w=800" alt="Beauty Spa" class="category-img">
+                <img src="https://images.unsplash.com/photo-1550009158-9ebf69173e03?w=800" alt="Serum Bottles" class="category-img">
+                <img src="https://images.unsplash.com/photo-1550009158-9ebf69173e03?w=800" alt="Wellness Products" class="category-img">
+            </div>
+            <a href="#" class="discover-link" style="margin-top: auto;">Discover more</a>
+        </div>
+
+        <div class="category-card">
+            <h2 class="category-title">Inverter Generator</h2>
+            <div class="image-quad">
+                <img src="https://images.unsplash.com/photo-1596484552834-6a58f850e0a1?w=400" alt="Compact Power" class="category-img">
+                <img src="https://images.unsplash.com/photo-1620288627223-53302f4e8c74?w=400" alt="Backup Energy" class="category-img">
+                <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=400" alt="Outdoor Power" class="category-img">
+                <img src="https://images.unsplash.com/photo-1620288627223-53302f4e8c74?w=400" alt="Industrial Gear" class="category-img">
+            </div>
+            <a href="#" class="discover-link">Discover more</a>
+        </div>
+
+        <div class="category-card">
+            <h2 class="category-title">Hand Made</h2>
+            <div class="image-quad">
+                <img src="https://images.unsplash.com/photo-1520408222757-6f9f95d87d5d?w=400" alt="Handmade Pottery" class="category-img">
+                <img src="https://images.unsplash.com/photo-1520408222757-6f9f95d87d5d?w=400" alt="Earthenware" class="category-img">
+                <img src="https://images.unsplash.com/photo-1520408222757-6f9f95d87d5d?w=400" alt="Artisan Jewelry" class="category-img">
+                <img src="https://images.unsplash.com/photo-1520408222757-6f9f95d87d5d?w=400" alt="Canvas Art" class="category-img">
+            </div>
+            <a href="#" class="discover-link">Discover more</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const grid = document.getElementById('mainGrid');
+            if (!grid) return;
+            
+            const links = grid.querySelectorAll('.discover-link');
+            const images = grid.querySelectorAll('.category-img');
+
+            links.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const category = link.parentElement.querySelector('.category-title').innerText;
+                    console.log(`Discovery Clicked: ${category}`);
+                });
+            });
+        });
+    </script>
 
     <!-- Categories Section -->
     <section class="categories">
@@ -2257,6 +2545,12 @@
         });
 
         updateCatSlider();
+
+        // --- Log Action for Features ---
+        function logAction(message) {
+            console.log("Feature Action:", message);
+            // Visual feedback could be added here if needed
+        }
 
     </script>
 </body>
